@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Menú · Cafetería Rose</title>
+  <meta name="description" content="Menú de Cafetería Rose: bebidas calientes, bebidas frías, pastelería, postres, combos y promociones.">
+  <meta name="theme-color" content="#0c2219">
+
+  <!-- Vista previa al compartir el enlace (WhatsApp, Facebook) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Menú · Cafetería Rose">
+  <meta property="og:description" content="Bebidas, pastelería, postres, combos y promociones.">
+  <!-- Cuando el sitio esté publicado, descomenta y reemplaza con la dirección real:
+  <meta property="og:image" content="https://USUARIO.github.io/REPOSITORIO/img/menu/02-bebidas-calientes-con-cafe.jpg">
+  -->
+
+  <link rel="icon" href="img/icono.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@400;500&display=swap">
+
+  <link rel="stylesheet" href="assets/vendor/photoswipe/photoswipe.css">
+  <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+<body>
+
+  <header class="portada">
+    <p class="portada__pre">Cafetería</p>
+    <h1 class="portada__nombre">Rose</h1>
+    <div class="adorno" aria-hidden="true"><span></span><i>✦</i><span></span></div>
+    <p class="portada__lema">Nuestro menú</p>
+    <p class="portada__ayuda">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21M10.5 7.5v6M7.5 10.5h6"/></svg>
+      Toca cualquier imagen para verla en grande
+    </p>
+  </header>
+
+  <nav class="pestanas" aria-label="Secciones del menú">
+    <ul>
+      <li><a href="#calientes">Calientes</a></li>
+      <li><a href="#frias">Frías</a></li>
+      <li><a href="#pasteleria">Pastelería</a></li>
+      <li><a href="#combos">Combos</a></li>
+    </ul>
+  </nav>
+
+  <main id="menu">
+
+    <!-- ============ BEBIDAS CALIENTES ============ -->
+    <section class="seccion" id="calientes" aria-labelledby="t-calientes">
+      <header class="seccion__cabecera">
+        <h2 id="t-calientes">Bebidas calientes</h2>
+        <p>Café y té</p>
+      </header>
+      <div class="galeria">
+        <figure class="pieza recorte" style="--ratio: 714 / 780; --pos: 50% 22%;">
+          <a class="zoom" href="img/menu/01-cafe-y-te-de-la-casa.jpg" data-pswp-width="714" data-pswp-height="1280" data-cropped="true" target="_blank">
+            <img src="img/menu/01-cafe-y-te-de-la-casa.jpg" width="714" height="1280" fetchpriority="high" decoding="async"
+                 alt="De la casa, precio único Bs. 10: café de la casa y té de la casa.">
+          </a>
+        </figure>
+        <figure class="pieza">
+          <a class="zoom" href="img/menu/02-bebidas-calientes-con-cafe.jpg" data-pswp-width="1024" data-pswp-height="1024" target="_blank">
+            <img src="img/menu/02-bebidas-calientes-con-cafe.jpg" width="1024" height="1024" decoding="async"
+                 alt="Bebidas calientes con café: Americano Bs. 12, Latte Bs. 16, Capuccino Bs. 14, Vainilla Latte Bs. 17, Mocaccino Bs. 17, Mocaccino PepperMint Bs. 18, Nutellate Bs. 19.">
+          </a>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ BEBIDAS FRÍAS ============ -->
+    <section class="seccion" id="frias" aria-labelledby="t-frias">
+      <header class="seccion__cabecera">
+        <h2 id="t-frias">Bebidas frías</h2>
+        <p>Jugos, milkshakes y smoothies</p>
+      </header>
+      <div class="galeria">
+        <figure class="pieza">
+          <a class="zoom" href="img/menu/03-jugos-de-frutas.jpg" data-pswp-width="1024" data-pswp-height="1024" target="_blank">
+            <img src="img/menu/03-jugos-de-frutas.jpg" width="1024" height="1024" loading="lazy" decoding="async"
+                 alt="Jugos de frutas, con agua Bs. 16 y con leche Bs. 19: frutilla, mango, frutos rojos, maracuyá, copuazú, limón y piña.">
+          </a>
+        </figure>
+        <figure class="pieza recorte" style="--ratio: 714 / 1140; --pos: 50% 29%;">
+          <a class="zoom" href="img/menu/04-milkshakes.jpg" data-pswp-width="714" data-pswp-height="1280" data-cropped="true" target="_blank">
+            <img src="img/menu/04-milkshakes.jpg" width="714" height="1280" loading="lazy" decoding="async"
+                 alt="Milkshakes, precio Bs. 27: frutilla, mango, frutos rojos, maracuyá, copuazú, Oreo, chocolate y frapuccino.">
+          </a>
+        </figure>
+        <figure class="pieza pieza--ancha">
+          <a class="zoom" href="img/menu/05-smoothies.jpg" data-pswp-width="1280" data-pswp-height="776" target="_blank">
+            <img src="img/menu/05-smoothies.jpg" width="1280" height="776" loading="lazy" decoding="async"
+                 alt="Smoothies, precio Bs. 35: chocolate y frutilla.">
+          </a>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ PASTELERÍA Y POSTRES ============ -->
+    <section class="seccion" id="pasteleria" aria-labelledby="t-pasteleria">
+      <header class="seccion__cabecera">
+        <h2 id="t-pasteleria">Pastelería y postres</h2>
+        <p>Dulces, salados y waffles</p>
+      </header>
+      <div class="galeria">
+        <!-- Lista en texto: para cambiar un precio, edita el número después de "Bs." -->
+        <article class="carta" aria-label="Lista de precios de pastelería">
+          <h3 class="carta__titulo">Pastelería</h3>
+          <ul class="carta__lista">
+            <li><span class="carta__nombre">Tiramisú</span><span class="carta__puntos"></span><span class="carta__precio">Bs. 19</span></li>
+            <li><span class="carta__nombre">Cheesecake <small>Red Velvet, Oreo, Maracuyá</small></span><span class="carta__puntos"></span><span class="carta__precio">Bs. 19</span></li>
+            <li><span class="carta__nombre">Tres Leches</span><span class="carta__puntos"></span><span class="carta__precio">Bs. 13</span></li>
+            <li><span class="carta__nombre">Alfajores</span><span class="carta__puntos"></span><span class="carta__precio">Bs. 10</span></li>
+            <li><span class="carta__nombre">Rollo de Jamón y Queso</span><span class="carta__puntos"></span><span class="carta__precio">Bs. 10</span></li>
+            <li><span class="carta__nombre">Porciones de Tortas <small>Red Velvet, Chocolate y Zanahoria</small></span><span class="carta__puntos"></span><span class="carta__precio">Bs. 23</span></li>
+            <li><span class="carta__nombre">Empanada Frita</span><span class="carta__puntos"></span><span class="carta__precio">Bs. 8</span></li>
+            <li><span class="carta__nombre">Puka</span><span class="carta__puntos"></span><span class="carta__precio">Bs. 10</span></li>
+            <li><span class="carta__nombre">Brioche</span><span class="carta__puntos"></span><span class="carta__precio">Bs. 10</span></li>
+          </ul>
+        </article>
+        <figure class="pieza">
+          <a class="zoom" href="img/menu/06-festival-de-waffles.jpg" data-pswp-width="896" data-pswp-height="1195" target="_blank">
+            <img src="img/menu/06-festival-de-waffles.jpg" width="896" height="1195" loading="lazy" decoding="async"
+                 alt="Festival de waffles, Bs. 20 cada uno: con frutas, con frutas y helado, Oreo, chocolate, red velvet, pizza y cuñapé.">
+          </a>
+        </figure>
+        <figure class="pieza">
+          <a class="zoom" href="img/menu/07-helado-sundae.jpg" data-pswp-width="1024" data-pswp-height="1024" target="_blank">
+            <img src="img/menu/07-helado-sundae.jpg" width="1024" height="1024" loading="lazy" decoding="async"
+                 alt="Helado sundae, precio Bs. 12.">
+          </a>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ COMBOS Y PROMOCIONES ============ -->
+    <section class="seccion" id="combos" aria-labelledby="t-combos">
+      <header class="seccion__cabecera">
+        <h2 id="t-combos">Combos y promociones</h2>
+        <p>Para acompañar tu café</p>
+      </header>
+      <div class="galeria">
+        <figure class="pieza">
+          <a class="zoom" href="img/menu/08-combo-cafe-puka.jpg" data-pswp-width="1024" data-pswp-height="1024" target="_blank">
+            <img src="img/menu/08-combo-cafe-puka.jpg" width="1024" height="1024" loading="lazy" decoding="async"
+                 alt="Combo café de la casa + puka, precio Bs. 23.">
+          </a>
+        </figure>
+        <figure class="pieza">
+          <a class="zoom" href="img/menu/09-combo-cafe-brioche.jpg" data-pswp-width="976" data-pswp-height="1097" target="_blank">
+            <img src="img/menu/09-combo-cafe-brioche.jpg" width="976" height="1097" loading="lazy" decoding="async"
+                 alt="Combo café de la casa + brioche, precio Bs. 23.">
+          </a>
+        </figure>
+        <figure class="pieza">
+          <a class="zoom" href="img/menu/10-combo-chocolate-muffin.jpg" data-pswp-width="1024" data-pswp-height="1024" target="_blank">
+            <img src="img/menu/10-combo-chocolate-muffin.jpg" width="1024" height="1024" loading="lazy" decoding="async"
+                 alt="Combo chocolate caliente + muffin de vainilla con chispas de chocolate, precio Bs. 25.">
+          </a>
+        </figure>
+        <figure class="pieza">
+          <a class="zoom" href="img/menu/11-combo-pepsi-empanada.jpg" data-pswp-width="1024" data-pswp-height="1024" target="_blank">
+            <img src="img/menu/11-combo-pepsi-empanada.jpg" width="1024" height="1024" loading="lazy" decoding="async"
+                 alt="Combo Pepsi + empanada frita, precio Bs. 13.">
+          </a>
+        </figure>
+        <figure class="pieza">
+          <a class="zoom" href="img/menu/12-promo-2-milkshakes.jpg" data-pswp-width="1022" data-pswp-height="1280" target="_blank">
+            <img src="img/menu/12-promo-2-milkshakes.jpg" width="1022" height="1280" loading="lazy" decoding="async"
+                 alt="Promoción 2 milkshakes, precio Bs. 35.">
+          </a>
+        </figure>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="pie">
+    <div class="adorno" aria-hidden="true"><span></span><i>✦</i><span></span></div>
+    <p class="pie__marca">Cafetería <em>Rose</em></p>
+    <p>Precios en bolivianos (Bs.)</p>
+
+    <!-- Datos de contacto: descomenta (quita las marcas de comentario) y completa.
+    <ul class="pie__datos">
+      <li>Lunes a sábado · 8:00 a 20:00</li>
+      <li><a href="https://maps.google.com/?q=Cafeteria+Rose">Cómo llegar</a></li>
+      <li><a href="https://wa.me/591XXXXXXXX">WhatsApp</a></li>
+      <li><a href="https://instagram.com/USUARIO">Instagram</a></li>
+    </ul>
+    -->
+
+    <p class="pie__copy">© 2026 Cafetería Rose</p>
+  </footer>
+
+  <script src="assets/vendor/photoswipe/photoswipe.umd.min.js"></script>
+  <script src="assets/vendor/photoswipe/photoswipe-lightbox.umd.min.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

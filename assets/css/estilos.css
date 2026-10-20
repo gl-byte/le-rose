@@ -1,0 +1,357 @@
+/* Cafetería Rose · menú digital */
+
+:root {
+  --verde-950: #081a12;
+  --verde-900: #0c2219;
+  --verde-800: #112b20;
+  --verde-700: #1a3a2b;
+  --crema: #f4ecdc;
+  --crema-suave: rgba(244, 236, 220, 0.72);
+  --oro: #c9a96b;
+  --oro-suave: rgba(201, 169, 107, 0.32);
+  --rosa: #dba9a2;
+
+  --serif: "Cormorant Garamond", "Garamond", "Georgia", serif;
+  --sans: "Jost", "Segoe UI", system-ui, sans-serif;
+
+  --ancho: 1040px;
+  --margen: 16px;
+  --radio: 16px;
+  --alto-pestanas: 58px;
+
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: calc(var(--alto-pestanas) + 8px);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--crema);
+  background-color: var(--verde-900);
+  background-image:
+    radial-gradient(1200px 600px at 50% -200px, rgba(219, 169, 162, 0.10), transparent 70%),
+    radial-gradient(900px 500px at 50% 0, var(--verde-700), transparent 75%);
+  background-repeat: no-repeat;
+}
+
+img { max-width: 100%; }
+a { color: inherit; }
+
+/* ---------- Adorno (línea · estrella · línea) ---------- */
+
+.adorno {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  color: var(--oro);
+}
+.adorno span {
+  width: 64px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--oro));
+}
+.adorno span:last-child { transform: scaleX(-1); }
+.adorno i { font-style: normal; font-size: 12px; }
+
+/* ---------- Portada ---------- */
+
+.portada {
+  padding: calc(56px + env(safe-area-inset-top)) var(--margen) 36px;
+  text-align: center;
+}
+.portada__pre {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+  color: var(--oro);
+  padding-left: 0.42em; /* compensa el espaciado de la última letra */
+}
+.portada__nombre {
+  margin: 4px 0 14px;
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 600;
+  font-size: clamp(76px, 22vw, 128px);
+  line-height: 0.95;
+  letter-spacing: 0.01em;
+}
+.portada__lema {
+  margin: 16px 0 0;
+  font-family: var(--serif);
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--crema-suave);
+}
+.portada__ayuda {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 26px 0 0;
+  padding: 8px 16px;
+  font-size: 13px;
+  color: var(--crema-suave);
+  border: 1px solid var(--oro-suave);
+  border-radius: 999px;
+}
+.portada__ayuda svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: var(--oro);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+}
+
+/* ---------- Pestañas de secciones ---------- */
+
+.pestanas {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(12, 34, 25, 0.88);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid var(--oro-suave);
+  border-bottom: 1px solid var(--oro-suave);
+}
+.pestanas ul {
+  display: flex;
+  gap: 8px;
+  max-width: var(--ancho);
+  height: var(--alto-pestanas);
+  margin: 0 auto;
+  padding: 0 var(--margen);
+  align-items: center;
+  list-style: none;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.pestanas ul::-webkit-scrollbar { display: none; }
+.pestanas li { flex: none; }
+.pestanas li:first-child { margin-left: auto; }
+.pestanas li:last-child { margin-right: auto; }
+.pestanas a {
+  display: block;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  color: var(--crema-suave);
+  border-radius: 999px;
+  transition: background-color 0.2s, color 0.2s;
+}
+.pestanas a:hover { color: var(--crema); }
+.pestanas a[aria-current="true"] {
+  background: var(--oro);
+  color: var(--verde-950);
+}
+
+/* ---------- Secciones ---------- */
+
+main {
+  max-width: var(--ancho);
+  margin: 0 auto;
+  padding: 0 var(--margen);
+}
+
+.seccion { padding-top: 44px; }
+
+.seccion__cabecera {
+  margin-bottom: 22px;
+  text-align: center;
+}
+.seccion__cabecera h2 {
+  margin: 0;
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: clamp(32px, 8vw, 42px);
+  line-height: 1.1;
+}
+.seccion__cabecera p {
+  margin: 6px 0 0;
+  font-size: 13px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--oro);
+}
+
+.galeria {
+  display: grid;
+  gap: 18px;
+  align-items: start;
+}
+
+@media (min-width: 760px) {
+  .galeria {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .pieza--ancha { grid-column: 1 / -1; }
+  /* Si queda una sola pieza al final, se centra */
+  .galeria > :last-child:nth-child(odd):not(.pieza--ancha) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc(50% - 12px);
+  }
+}
+
+/* ---------- Pieza (imagen del menú) ---------- */
+
+.pieza { margin: 0; }
+
+.pieza .zoom {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: var(--radio);
+  background: var(--verde-800);
+  border: 1px solid var(--oro-suave);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.38);
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.pieza img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+/* Recorte visual sin modificar el archivo; al ampliar se ve completa */
+.pieza.recorte img {
+  aspect-ratio: var(--ratio);
+  object-fit: cover;
+  object-position: var(--pos, 50% 50%);
+}
+
+@media (hover: hover) {
+  .pieza .zoom:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+  }
+}
+.pieza .zoom:focus-visible,
+.pestanas a:focus-visible {
+  outline: 2px solid var(--oro);
+  outline-offset: 3px;
+}
+
+/* ---------- Carta de pastelería (texto) ---------- */
+
+.carta {
+  position: relative;
+  padding: 40px 26px 34px;
+  border-radius: var(--radio);
+  background:
+    radial-gradient(120% 70% at 50% 0, rgba(201, 169, 107, 0.10), transparent 60%),
+    linear-gradient(180deg, var(--verde-800), var(--verde-950));
+  border: 1px solid var(--oro-suave);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.38);
+}
+/* Marco interior fino, estilo carta impresa */
+.carta::before {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border: 1px solid rgba(201, 169, 107, 0.18);
+  border-radius: calc(var(--radio) - 6px);
+  pointer-events: none;
+}
+.carta__titulo {
+  margin: 0 0 22px;
+  text-align: center;
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: clamp(36px, 10vw, 46px);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.carta__lista {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.carta__lista li {
+  display: flex;
+  align-items: baseline;
+  align-items: last baseline;
+  gap: 8px;
+  padding: 7px 0;
+  font-family: var(--serif);
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.carta__nombre small {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--crema-suave);
+}
+.carta__puntos {
+  flex: 1;
+  min-width: 16px;
+  border-bottom: 2px dotted rgba(201, 169, 107, 0.55);
+  transform: translateY(-0.28em);
+}
+.carta__precio {
+  flex: none;
+  color: var(--oro);
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+/* ---------- Pie ---------- */
+
+.pie {
+  margin-top: 64px;
+  padding: 0 var(--margen) calc(40px + env(safe-area-inset-bottom));
+  text-align: center;
+  font-size: 14px;
+  color: var(--crema-suave);
+}
+.pie p { margin: 6px 0; }
+.pie__marca {
+  margin-top: 18px !important;
+  font-family: var(--serif);
+  font-size: 26px;
+  color: var(--crema);
+}
+.pie__marca em { font-weight: 600; }
+.pie__datos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 20px;
+  margin: 16px 0;
+  padding: 0;
+  list-style: none;
+}
+.pie__datos a { color: var(--oro); }
+.pie__copy {
+  margin-top: 20px !important;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  opacity: 0.7;
+}
+
+/* ---------- Visor ampliado ---------- */
+
+.pswp { --pswp-bg: var(--verde-950); }
