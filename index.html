@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Menú · Cafetería Rose</title>
-  <meta name="description" content="Menú de Cafetería Rose: bebidas calientes, bebidas frías, pastelería, postres, combos y promociones.">
-  <meta name="theme-color" content="#0c2219">
+  <title>Menú · Le' Rosé</title>
+  <meta name="description" content="Menú de la cafetería Le' Rosé, by Graciela Mena: bebidas calientes, bebidas frías, pastelería, postres, combos y promociones.">
+  <meta name="theme-color" content="#12534f">
 
   <!-- Vista previa al compartir el enlace (WhatsApp, Facebook) -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Menú · Cafetería Rose">
-  <meta property="og:description" content="Bebidas, pastelería, postres, combos y promociones.">
+  <meta property="og:title" content="Menú · Le' Rosé">
+  <meta property="og:description" content="Cafetería Le' Rosé, by Graciela Mena. Bebidas, pastelería, postres, combos y promociones.">
   <!-- Cuando el sitio esté publicado, descomenta y reemplaza con la dirección real:
   <meta property="og:image" content="https://USUARIO.github.io/REPOSITORIO/img/menu/02-bebidas-calientes-con-cafe.jpg">
   -->
@@ -19,7 +19,9 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@400;500&display=swap">
+  <!-- Tipografías del logo: Parisienne ("Le' Rosé") y Merriweather ("By Graciela Mena") -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Parisienne&display=swap">
+  <link rel="preload" href="img/logo-le-rose.webp" as="image" type="image/webp">
 
   <link rel="stylesheet" href="assets/vendor/photoswipe/photoswipe.css">
   <link rel="stylesheet" href="assets/css/estilos.css">
@@ -28,9 +30,13 @@
 
   <header class="portada">
     <p class="portada__pre">Cafetería</p>
-    <h1 class="portada__nombre">Rose</h1>
-    <div class="adorno" aria-hidden="true"><span></span><i>✦</i><span></span></div>
-    <p class="portada__lema">Nuestro menú</p>
+    <!-- Logo con fondo transparente: se funde con el fondo de la página -->
+    <h1 class="portada__logo">
+      <picture>
+        <source srcset="img/logo-le-rose.webp" type="image/webp">
+        <img src="img/logo-le-rose.png" width="1400" height="693" fetchpriority="high" alt="Le' Rosé, by Graciela Mena">
+      </picture>
+    </h1>
     <p class="portada__ayuda">
       <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21M10.5 7.5v6M7.5 10.5h6"/></svg>
       Toca cualquier imagen para verla en grande
@@ -179,19 +185,20 @@
 
   <footer class="pie">
     <div class="adorno" aria-hidden="true"><span></span><i>✦</i><span></span></div>
-    <p class="pie__marca">Cafetería <em>Rose</em></p>
+    <p class="pie__marca">Le' Rosé</p>
+    <p class="pie__firma">By Graciela Mena</p>
     <p>Precios en bolivianos (Bs.)</p>
 
     <!-- Datos de contacto: descomenta (quita las marcas de comentario) y completa.
     <ul class="pie__datos">
       <li>Lunes a sábado · 8:00 a 20:00</li>
-      <li><a href="https://maps.google.com/?q=Cafeteria+Rose">Cómo llegar</a></li>
+      <li><a href="https://maps.google.com/?q=Le+Rose+cafeteria">Cómo llegar</a></li>
       <li><a href="https://wa.me/591XXXXXXXX">WhatsApp</a></li>
       <li><a href="https://instagram.com/USUARIO">Instagram</a></li>
     </ul>
     -->
 
-    <p class="pie__copy">© 2026 Cafetería Rose</p>
+    <p class="pie__copy">© 2026 Le' Rosé</p>
   </footer>
 
   <script src="assets/vendor/photoswipe/photoswipe.umd.min.js"></script>
