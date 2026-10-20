@@ -21,6 +21,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <!-- Tipografías del logo: Parisienne ("Le' Rosé") y Merriweather ("By Graciela Mena") -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Parisienne&display=swap">
+  <!-- Fuente del logotipo de MiPuesto, solo con las letras de "mi-puesto.com" (firma del pie) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@800&text=mi-puesto.com&display=swap">
   <link rel="preload" href="img/logo-le-rose.webp" as="image" type="image/webp">
 
   <link rel="stylesheet" href="assets/vendor/photoswipe/photoswipe.css">
@@ -64,7 +66,7 @@
         <figure class="pieza recorte" style="--ratio: 714 / 780; --pos: 50% 22%;">
           <a class="zoom" href="img/menu/01-cafe-y-te-de-la-casa.jpg" data-pswp-width="714" data-pswp-height="1280" data-cropped="true" target="_blank">
             <img src="img/menu/01-cafe-y-te-de-la-casa.jpg" width="714" height="1280" fetchpriority="high" decoding="async"
-                 alt="De la casa, precio único Bs. 10: café de la casa y té de la casa.">
+                 alt="De la casa: café de la casa y té de la casa.">
           </a>
         </figure>
         <figure class="pieza">
@@ -187,6 +189,7 @@
     <div class="adorno" aria-hidden="true"><span></span><i>✦</i><span></span></div>
     <p class="pie__marca">Le' Rosé</p>
     <p class="pie__firma">By Graciela Mena</p>
+    <p>Precios en bolivianos (Bs.)</p>
 
     <!-- Datos de contacto: descomenta (quita las marcas de comentario) y completa.
     <ul class="pie__datos">
@@ -198,6 +201,17 @@
     -->
 
     <p class="pie__copy">© 2026 Le' Rosé</p>
+
+    <!-- Firma de MiPuesto: "?desde=catalogo" es el mismo origen que usan los catálogos del SaaS,
+         para contar en la analítica las visitas que llegan desde un catálogo -->
+    <a class="pie__saas" href="https://mi-puesto.com/?desde=catalogo" target="_blank" rel="noopener">
+      <svg viewBox="0 0 256 325" width="14" height="18" fill="none" stroke="currentColor" stroke-width="22"
+           stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M21 95 C21 56 44 23 66 23 L190 23 C212 23 234 56 234 95 Q198.5 149 164 95 Q128 149 92 95 Q56.5 149 21 95 Z"/>
+        <path d="M53 144 V290 a12 12 0 0 0 12 12 h124 a12 12 0 0 0 12 -12 V144"/>
+      </svg>
+      <span>Impulsado por <strong>mi-puesto.com</strong></span>
+    </a>
   </footer>
 
   <script src="assets/vendor/photoswipe/photoswipe.umd.min.js"></script>
